@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>  
+void main()
+{  
+    char name[20],address[100];
+    int ebno;
+    float chg,unit,bill;
+    printf("Input Customer name : ");
+    scanf("%s",name);
+    printf("Input eb no of the customer : ");
+    scanf("%d",&ebno);
+    printf("Input the address of the customer : ");
+    scanf("%s",address);
+    printf("input unit consumed by customer : ");
+    scanf("%f",&unit);
+    if (unit<100)
+    {
+        chg =1.00;
+    }
+    else if (unit>100 && unit<=200)
+    {
+	    chg = 1.50;
+    }
+    else	if (unit>200 && unit<=300)
+    {
+		chg = 2.50;
+    }
+	else if (unit>300)
+	{
+			chg = 3.50;
+	}
+	bill=unit*chg;
+    printf("Customer name : %s\n",name);
+    printf("Customer ebno  : %d\n",ebno);
+    printf("Customer address : %s",address);
+    printf("unit Consumed  : %f\n",unit);
+    printf("Electric bill : %f",bill);
+}
