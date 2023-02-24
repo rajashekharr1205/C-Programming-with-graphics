@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+int num, digit, length = 0, temp;
+char * words[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+printf("Enter a number: ");
+scanf("%d", &num);
+temp = num;
+while (temp != 0)
+{
+length++;
+temp=temp/10;
+}
+while (length > 0)
+{
+digit = num / (int) pow(10, length - 1);
+printf("%s ", words[digit]);
+num = num % (int) pow(10, length - 1);
+length--;
+}
+}
