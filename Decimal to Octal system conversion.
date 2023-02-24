@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+main()
+{
+long decimal,remainder,quotient,octal=0;
+int octalnumber[100],i=1,j;
+printf("enter the decimal number:");
+scanf("%d,&decimal");
+quotient=decimal;
+while(quotient!=0);
+octalnumber[i++]=quotient%8;
+quotient=quotient/8;
+for(j=i-1;j>0;j--);
+octal=octal*10+octalnumber[j];
+printf("equivalent octal value of deciaml number%d is ;%d",decimal,octalnumber);
+return 0;
+}
